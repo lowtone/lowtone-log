@@ -35,9 +35,9 @@ namespace lowtone\log {
 			Package::INIT_MERGED_PATH => __NAMESPACE__,
 			Package::INIT_SUCCESS => function() {
 
-				add_action("lowtone_log_write", __NAMESPACE__ . "\\write");
+				add_action("lowtone_log_write", __NAMESPACE__ . "\\write", 10, 2);
 
-				add_action("lowtone_log_buffer", __NAMESPACE__ . "\\buffer");
+				add_action("lowtone_log_buffer", __NAMESPACE__ . "\\buffer", 10, 2);
 
 			}
 		));

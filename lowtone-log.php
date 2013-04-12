@@ -47,6 +47,10 @@ namespace lowtone\log {
 
 	// Functions
 	
+	function enabled() {
+		return 0 == get_option("lowtone_log_enabled") ? false : true;
+	}
+	
 	function path($file = NULL) {
 		return LOG_DIR . DIRECTORY_SEPARATOR . (trim($file) ?: "default.log");
 	}

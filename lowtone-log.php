@@ -28,7 +28,7 @@ namespace lowtone\log {
 	// Includes
 	
 	if (!include_once WP_PLUGIN_DIR . "/lowtone-content/lowtone-content.php") 
-		return trigger_error("Lowtone Content plugin is required", E_USER_ERROR);
+		return trigger_error("Lowtone Content plugin is required", E_USER_ERROR) && false;
 
 	$__i = Package::init(array(
 			Package::INIT_PACKAGES => array("lowtone"),
